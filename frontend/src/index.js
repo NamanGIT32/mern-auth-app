@@ -6,6 +6,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import Login from './components/login';
 import Signup from './components/signup';
 import 'react-toastify/ReactToastify.css';
+import {GoogleOAuthProvider} from "@react-oauth/google";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const App = () => {
@@ -21,7 +22,9 @@ const appRouter = createBrowserRouter([
   },
   {
     path:"/login",
-    element:<Login/>
+    element:
+    <GoogleOAuthProvider clientId='80116751819-t5sr3tabl583b8b8a3nomo6l08e3ln8o.apps.googleusercontent.com'><Login/></GoogleOAuthProvider>
+    
   },
   {
     path:"/signup",

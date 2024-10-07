@@ -1,6 +1,6 @@
 const express = require('express');
 require('dotenv').config();
-require('./Models/db.js');
+require('./Models/dbConnection.js');
 const AuthRoutes = require('./Routes/AuthRouter.js');
 const app = express();
 const bodyParser = require('body-parser');
